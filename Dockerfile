@@ -1,7 +1,7 @@
 FROM caddy:builder-alpine AS builder
 
 RUN xcaddy build \
-    --with github.com/lucaslorentz/caddy-docker-proxy/plugin \
+    --with github.com/lucaslorentz/caddy-docker-proxy/v2/plugin \
     --with github.com/pteich/caddy-tlsconsul
 
 FROM caddy:alpine
