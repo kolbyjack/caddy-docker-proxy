@@ -8,3 +8,5 @@ FROM caddy:latest
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
 COPY Caddyfile /etc/caddy/Caddyfile
+
+ENTRYPOINT ["caddy", "docker-proxy"]
